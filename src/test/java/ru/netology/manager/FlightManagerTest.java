@@ -29,7 +29,7 @@ class FlightManagerTest {
         flightManager.add(spb);
         Flight[] expected = new Flight[]{msk3,msk,msk2};
         Flight[] actual = flightManager.findAll("MOW","JOG");
-        Arrays.sort(actual);
+       // Arrays.sort(actual);
         assertArrayEquals(expected, actual);
     }
 

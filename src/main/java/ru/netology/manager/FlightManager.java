@@ -3,7 +3,11 @@ package ru.netology.manager;
 import ru.netology.domain.Flight;
 import ru.netology.repository.FlightRepository;
 
-public class FlightManager extends Flight {
+import java.util.Arrays;
+import java.util.Comparator;
+
+public class FlightManager {
+    Flight flying = new Flight();
     FlightRepository repository = new FlightRepository();
 
     public FlightRepository getRepository() {
@@ -24,9 +28,10 @@ public class FlightManager extends Flight {
                 result = tmp;
             }
         }
+        Arrays.sort(result);
         return result;
 
-            }
+    }
 
     public boolean matches(Flight flying, String from, String to) {
         if (flying != null) {
